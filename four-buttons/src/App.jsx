@@ -1,46 +1,74 @@
-// Project #7
 
-// Create four different buttons:
+// // Define the handleClick function
 
-// Button 1: Create a button that triggers an alert when it is clicked.
-function ButtonOne() {
+function Button() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+
   return (
-    <button>
-      I am a trigger
+    // Pass the handleClick function as a prop to the button element. handleClick is an event handler.
+
+    <button onClick={handleClick}>
+      Click me
     </button>
   );
 }
-function ButtonWithHandler() {
-	function handleClick() {
-		alert('Good choice.');
-	}
-	return (
-		<button onClick={handleClick}>
-		Button One
-		</button>
-	);
-}
+// Because event handlers are declared inside of a component, they have access to the component's props. This button, when clicked, shows an alert with its message prop:
 
-// Button 2: Create a button that triggers a console log when it is clicked.
-
-function EventHandlerProps({message, children}) {
+function AlertButton({ message, children}) {
   return (
-    <button onClick={() => console.log(message)}>
+    <button onClick={() => alert(message)}>
       {children}
     </button>
   );
 }
-// Button 3: Create a button that becomes disabled and changes the text when it is clicked.
 
-// Button 4: Create a button that triggers an alert when it is DOUBLE clicked.
 
-export default function App() {
-
+function UploadButton() {
   return (
-    <>
-  <ButtonOne />
-  <ButtonWithHandler />
-  <EventHandlerProps />
-</>
-  )
+    <Button onClick={() => alert('Uploading!')}>
+      Upload Image
+    </Button>
+  );
+}
+
+// Often you'll want the parent component to specify a child's event handler. Consider buttons: depending on where you're using a Button component, you might want to execute a different function-- perhaps one that plays a movie and another uploads an image. 
+
+// To do this, pass a prop the component from its parent as the even handler like so:
+
+function PlayButton({ movieName }) {
+  function handlePlayClick() {
+    alert(`Playing ${movieName}!`);
+  }
+  return (
+    <button onClick={handlePlayClick}>
+      Play "{movieName}"
+    </button>
+  );
+}
+
+
+// function Toolbar() {
+//   return (
+//     <div>
+
+//       <AlertButton message="Playing!">
+//         Play Movie
+//       </AlertButton>
+//       <AlertButton message="Uploading!">
+//         Upload Image
+//       </AlertButton>
+//     </div>
+//   );
+// }
+
+
+export default function Toolbar() {
+  return (
+    <div>
+      <PlayButton movieName="Kiki's Delivery Service" />
+      <UploadButton />
+    </div>
+  );
 }
