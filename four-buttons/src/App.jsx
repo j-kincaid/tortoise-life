@@ -3,7 +3,7 @@
 // Create four different buttons:
 
 // Button 1: Create a button that triggers an alert when it is clicked.
- function ButtonOne() {
+function ButtonOne() {
   return (
     <button>
       I am a trigger
