@@ -14,8 +14,35 @@ body {
   color: var(--md-sys-color-on-background)
 }
 
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article.skill-row,
+h1,
+h2 {
+  display: block;
+  margin-left: 4vw;
+}
+
+
+
+p.paragraph-left,
+p.paragraph-right {
+  color: #20261D;
+  font-size: 1.5rem;
+  line-height: 40px;
+}
+
+p.paragraph-left:last-child, 
+p.paragraph-right:last-child {
+  margin-bottom: 20vh;
+}
+
 img {
-  max-width: 300px;
+  max-width: 700px;
   border-radius: 5px;
 }
 
@@ -28,7 +55,6 @@ img.mne-image {
   border: 0.5px solid darkgray;
   border-radius: 2%;
   max-width: 65%;
-  padding-bottom: 5px;
 }
 
 

@@ -12,6 +12,13 @@
 </html>
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" />
+  <script type="module">
+    import '@material/web/all.js';
+    import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+    document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+  </script>
   <script type="importmap">
     {
       "imports": {
@@ -19,64 +26,71 @@
       }
     }
   </script>
-  <script type="module">
-    import '@material/web/all.js';
-    import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
-
-    document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
-  </script>
 </head>
 <body>
+  <header>
+ 
   <h1 class="md-typescale-display-medium">Jessica Kincaid</h1>
 
   <h2 class="md-typescale-display-small">creative projects</h2>
 
+</header> 
+
+<main>
   <div class="md-typescale-body-medium">
-    <article>
+    <article class="skill-row">
       <p class="md-typescale-body-large">Fine Art</p>
           <img class="beadwork-image"
               src="./src/assets/tinyPatio.jpg"
               alt="pictorial beaded textile" />
-          <p>I create meticulous beaded textiles.</p>
+              <p class="md-typescale-body-small">I create meticulously detailed textiles with tiny glass beads. View my art here.</p>
   
-          <a href="https://j-kincaid.github.io/Open_studio/"><md-elevated-button type="reset">gallery</md-elevated-button></a>
+          <a href="https://j-kincaid.github.io/Open_studio/"><md-filled-tonal-button>gallery</md-filled-tonal-button></a>
           </article>
-<article>
-    <p class="md-typescale-body-medium">kitten saga</p>
+    <article class="skill-row">
+    <p class="md-typescale-body-large">kitten saga</p>
     <img class="mne-image"
     src="./src/assets/sweetums.jpg"
     alt="kitten" />
-    <p class="md-typescale-body-small">Kitten Saga is a non-linear story created with Twine. Play the role of a kitten as you grow and experience the life of a domestic cat. Will your tale have a happy ending?</p>
-    <a href="./KittenSaga.html"><md-elevated-button type="reset">take the journey</md-elevated-button></a>
+    <p class="md-typescale-body-small"></p>Kitten Saga is a non-linear story created with Twine. Play the role of a kitten as you grow and experience the life of a domestic cat. Will your tale have a happy ending?</p>
+    <a href="./KittenSaga.html"><md-filled-tonal-button>take the journey</md-elevated-button></a>
   </article>
 
-  <article>
+  <article class="skill-row">
 
 
-    <p class="md-typescale-body-medium">MneMonocle, an AR device for Seniors</p>
+    <p class="md-typescale-body-large">MneMonocle, an AR device for Seniors</p>
     <img class="mne-image"
     src="./src/assets/mne.png"
     alt="The Mnemonocle is an imaginary AR device for seniors" />
     <p class="md-typescale-body-small">The MneMonocle is an imaginary wearable device designed for seniors. Through augmented reality the wearer can access heightened sensory experiences and recall information pertintent to their daily lives.</p>
     
-    <a href="https://j-kincaid.github.io/emerging-tech/"><md-elevated-button type="reset">Promotional details</md-elevated-button></a>
+    <a href="https://j-kincaid.github.io/emerging-tech/"><md-filled-tonal-button>Ficticious Promotion</md-filled-tonal-button></a>
   </article>
-
-    <p class="md-typescale-body-medium">Developer Internship, Dimensional Innovations, Summer 2023</p>
+  <article class="skill-row">
+    <p class="md-typescale-body-large">Developer Internship, Dimensional Innovations, Summer 2023</p>
     <img class="mne.image"
     src="./src/assets/mmc.jpg"
     
     alt="Vue application at Menorah Medical Center Legacy Hall" />
     <p class="md-typescale-body-small">During the internship I collaborated with the Development, Design and Product teams to create a front end application for non-touch screens in Vue and Electron. The application features an image slider and API requests from DI's custom-built CMS. Two large screens display separate slideshows, permanently on view in Menorah Medical Center's Legacy Hall.</p>
+  </article>
     </div>
-    
+  </main>
+
+  <footer></footer>
   <style>
     div {
       display: flex;
-      flex-direction: column;
+      /* flex-direction: column; */
       flex-wrap: wrap;
-      align-items: flex-start;
+      /* align-items: flex-start; */
       gap: 16px;
     }
+
+  article.skill-row {
+  flex: 400px;
+  margin-right: 6vw;
+}
   </style>
 </body>
