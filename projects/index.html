@@ -13,12 +13,6 @@
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico" />
-  <script type="module">
-    import '@material/web/all.js';
-    import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
-
-    document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
-  </script>
   <script type="importmap">
     {
       "imports": {
@@ -26,15 +20,18 @@
       }
     }
   </script>
+  <script type="module">
+    import '@material/web/all.js';
+    import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+    document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+  </script>
 </head>
 <body>
   <header>
- 
-  <h1 class="md-typescale-display-medium">Jessica Kincaid</h1>
-
-  <h2 class="md-typescale-display-small">creative projects</h2>
-
-</header> 
+    <h1 class="md-typescale-display-large">Jessica Kincaid</h1>
+    <h2 class="md-typescale-display-medium">creative projects</h2>
+  </header>
 
 <main>
   <div class="md-typescale-body-medium">
@@ -43,16 +40,16 @@
           <img class="beadwork-image"
               src="./src/assets/tinyPatio.jpg"
               alt="pictorial beaded textile" />
-              <p class="md-typescale-body-small">I create meticulously detailed textiles with tiny glass beads. View my art here.</p>
+              <p class="md-typescale-body-small">I create meticulously detailed textiles with tiny glass beads. Visit my art studio to see more!</p>
   
-          <a href="https://j-kincaid.github.io/Open_studio/"><md-filled-tonal-button>gallery</md-filled-tonal-button></a>
+          <a href="https://j-kincaid.github.io/Open_studio/"><md-filled-tonal-button>open studio</md-filled-tonal-button></a>
           </article>
     <article class="skill-row">
     <p class="md-typescale-body-large">kitten saga</p>
-    <img class="mne-image"
+    <img class="kitten-image"
     src="./src/assets/sweetums.jpg"
     alt="kitten" />
-    <p class="md-typescale-body-small"></p>Kitten Saga is a non-linear story created with Twine. Play the role of a kitten as you grow and experience the life of a domestic cat. Will your tale have a happy ending?</p>
+    <p class="md-typescale-body-small"></p>Kitten Saga is a nonlinear story about the adventures of a cat from kitten to adulthood. I created it with an open-source software called Twine. Play the role of a kitten as you grow and experience the life of a domestic cat. Will your tale have a happy ending?</p>
     <a href="./KittenSaga.html"><md-filled-tonal-button>take the journey</md-elevated-button></a>
   </article>
 
@@ -69,7 +66,7 @@
   </article>
   <article class="skill-row">
     <p class="md-typescale-body-large">Developer Internship, Dimensional Innovations, Summer 2023</p>
-    <img class="mne.image"
+    <img class="mmc.image"
     src="./src/assets/mmc.jpg"
     
     alt="Vue application at Menorah Medical Center Legacy Hall" />

@@ -1,4 +1,4 @@
-/* Color palette */
+/* Color palette from Material Builder */
 
 :root,
 :host{
@@ -14,7 +14,6 @@ body {
   color: var(--md-sys-color-on-background)
 }
 
-
 main {
   display: flex;
   flex-wrap: wrap;
@@ -22,12 +21,11 @@ main {
 
 article.skill-row,
 h1,
-h2 {
-  display: block;
+h2,
+h3 {
+  /* display: block; */
   margin-left: 4vw;
 }
-
-
 
 p.paragraph-left,
 p.paragraph-right {
@@ -42,19 +40,14 @@ p.paragraph-right:last-child {
 }
 
 img {
-  max-width: 700px;
   border-radius: 5px;
 }
 
-img.django-image,
-img.beadwork-image,
-img.trivial-image,
-img.mmc-image,
-img.mne-image {
+img {
   flex: 2;
   border: 0.5px solid darkgray;
   border-radius: 2%;
-  max-width: 65%;
+  max-width: 55%;
 }
 
 
